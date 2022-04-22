@@ -1,0 +1,16 @@
+name: 'action-npm'
+description: 'Run an npm command.'
+author: "Tyler O'Brien"
+inputs:
+  source:
+    description: 'Filepath of source'
+    required: true
+  npm:
+    description: 'Set to 1 to use npm. Set to anything else to use yarn.'
+    default: '1'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'copy'
+  color: 'orange'
